@@ -724,7 +724,6 @@ dlgPick.addEventListener("close", () => {
 function ensureStudyReady(forceRebuild=false){
   const needRebuild = forceRebuild || !studyQueue.length;
   if (needRebuild){
-    buildStudyQueue();
     if (!studyQueue.length){
       // fallback: chọn deck active nếu user bỏ chọn hết
       selectedDeckIds = [state.activeDeckId].filter(Boolean);
